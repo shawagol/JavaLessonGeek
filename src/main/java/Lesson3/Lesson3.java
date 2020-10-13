@@ -115,14 +115,14 @@ public class Lesson3 {
                 }
             }
 
-        StringBuilder s3 = new StringBuilder(s2);
-            for (int j = 1; j < s3.length(); j++)
-                if (s3.charAt(j) == '.') {
-                    s3.insert(j+1, " ");
+     //   StringBuilder s3 = new StringBuilder(s2);
+            for (int j = 1; j < s2.length(); j++)
+                if (s2.charAt(j) == '.') {
+                    s2.insert(j+1, " ");
                 }
-            s3.deleteCharAt(s3.length()-1);
-            s3.append('.');
-        System.out.println(s3.toString());
+            s2.deleteCharAt(s2.length()-1);
+            s2.append('.');
+        System.out.println(s2.toString());
     }
 
 }
