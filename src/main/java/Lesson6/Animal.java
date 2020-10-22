@@ -1,5 +1,5 @@
 package Lesson6;
-import java.util.Random;
+
 
 
 public abstract class Animal{
@@ -19,51 +19,56 @@ public abstract class Animal{
     }
          void run(int value) {
              if (value > maxRun) {
-                 System.out.println(name + " " + value + " run false");
-             } else {
-                 System.out.println(name + " " + value + " run true");
+                 System.out.println(name + " " + value + " run: false");
+             } else   if (value ==0) {
+                 System.out.println(name + " - животное не бежит!");
+             }  else {
+                 System.out.println(name + " " + value + " run: true");
              }
          }
          void swim(int value) {
              if (value > maxSwim) {
-                 System.out.println(name + " " + value + " swim false");
+                 System.out.println(name + " " + value + " swim: false");
+             } else   if (value ==0) {
+                 System.out.println(name + " - животное не плывет!");
              } else {
-                 System.out.println(name + " " + value + " swim true");
+                 System.out.println(name + " " + value + " swim: true");
              }
+
          }
          void jump(double value) {
              if (value > maxJump) {
-                 System.out.println(name + " " + value + " jump false");
+                 System.out.println(name + " " + value + " jump: false");
+             }else   if (value ==0) {
+                     System.out.println(name + " - животное не прыгает!");
              } else {
-                 System.out.println(name + " " + value + " jump true" );
+                 System.out.println(name + " " + value + " jump: true" );
              }
          }
 
 
             public static void main(String[] args) {
-//        Animal[] animals = {
-//                new Cat("Барсик",150, 30,3.0),
-//                new Dog("Шарик", 450, 20, 1.2)
-//        };
 
-//Animal n1 = new Animal("margo", 200,54,2.2);
-                Dog dog1 = new Dog("Шарик",600, 110, 0.5);
+                Dog dog1 = new Dog("Шарик",600, 15, 0.5);
                 Dog dog2 = new Dog ("Тубрик");
-                Cat cat1 = new Cat("Барсик", 200, 0,2.0);
+                Cat cat1 = new Cat("Барсик", 300, 0,3.0);
                 Cat cat2 = new Cat ("Муся");
 
-                //IRun[] runDog1 = new IRun[ runDog1.run(150)];
 
                 dog1.run(150);
                 dog2.run(510);
-                cat1.run(500);
+                cat1.run(180);
                 cat2.run(230);
+
                 dog1.swim(15);
-                cat1.swim(15);
+                dog2.swim(15);
+                cat1.swim(0);
+                cat2.swim(15);
 
-                dog1.jump(0.1);
-                cat1.jump(2.1);
-
+                dog1.jump(0.4);
+                dog2.jump(0.6);
+                cat1.jump(2.8);
+                cat2.jump(2.1);
              }
 
 }

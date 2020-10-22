@@ -8,13 +8,15 @@ class Cat extends Animal {
     public  Cat(String name, int maxRun, int maxSwim, double maxJump){
         super(name,maxRun,maxSwim,maxJump);
     }
+
+
     @Override
-    void jump(double value) {
-        if (value > maxJump) {
-            System.out.println("cat "+name + " " + value + " jump false");
-        } else {
-            System.out.println("cat "+name + " " + value + " jump true" );
+    void swim(int value) {
+        if ((value == value)||(value ==0) ) {
+            System.out.println(name + " - кот, а коты не умеют плавать!");
+
         }
+
     }
 
 }
